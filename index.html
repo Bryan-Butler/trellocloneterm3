@@ -8,7 +8,43 @@
 
 </head>
 <body>
-    
+    <div class ="container">
+        <!-- Trello card form and column form -->
+         <div class="row">
+            <div class="column">
+                <!-- Form to create a card-->
+                <form id="cardForm">
+                    <h1> Create a card:</h1>
+                    <label for="cardTitle">Card title:</label>
+                    <input type="text" name="cardTitle" id="cardTitle"/>
+                    <br />
+                    <label for ="cardContent">Card description content:</label>
+                    <input type="text" name="cardContent" id="cardContent" />
+                    <br />
+                    <button id="cardSubmitButton" type="submit"> Update card preview</button>
+                </form>
+            </div>
+            <div class="column">
+                <!-- Fpreview of the card with new data-->
+                <!-- div#cardPreview.trelloCard-->
+                <!-- id for the js, class for the css-->
+                <div id="cardPreview" class="trelloCard">
+
+                </div>
+            </div>
+            <div class="column">
+                <!-- Form to create new columns-->
+                <form id="columnForm">
+                    
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Column & card display section with drag and drop -->
+            <p> Bottom row</p>
+        </div>
+
+    </div>
 
     <script src="./script.js"></script>
 </body>
