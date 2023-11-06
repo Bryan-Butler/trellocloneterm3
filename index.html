@@ -10,7 +10,7 @@
 <body>
     <div class ="container">
         <!-- Trello card form and column form -->
-         <div class="row">
+         <div class="row formRow">
             <div class="column">
                 <!-- Form to create a card-->
                 <form id="cardForm">
@@ -29,17 +29,28 @@
                 <!-- div#cardPreview.trelloCard-->
                 <!-- id for the js, class for the css-->
                 <div id="cardPreview" class="trelloCard">
-
+                    <h3 class="cardDisplay-title">
+                        Fill out the card title in the form!
+                    </h3>
+                    <p class="cardDisplay-content">
+                        Write a description in the form!
+                    </p>
                 </div>
             </div>
             <div class="column">
                 <!-- Form to create new columns-->
                 <form id="columnForm">
-                    
+                    <h1>
+                        Create a column:
+                    </h1>
+                    <label for="columnTitle">Column title:</label>
+                    <input type="text" name="columnTitle" id="columnTitle" />
+                    <br />
+                    <button id="columnSubmitButton" type="submit">Add column</button>
                 </form>
             </div>
         </div>
-        <div class="row">
+        <div class="row displayRow">
             <!-- Column & card display section with drag and drop -->
             <p> Bottom row</p>
         </div>

@@ -1,0 +1,67 @@
+/* asterisk means for EVERYTHING and ANYTHING */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+/* background colour here for whole page */
+body {
+    background-color: paleturquoise;
+}
+
+/* make the container use flex box to arrange elements inside of it */
+.container {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+/* Make rows as wide as the available screen */
+.row {
+    width: 100dvw;
+    padding: 2dvw;
+}
+
+/* Make the form row form columns next to eachother */
+.formRow {
+    width: 100dvw;
+    margin: 0;
+    display: flex;
+    height: 10dvh;
+}
+
+.displayRow {
+    margin:0;
+    display: flex;
+    height: 70dvh;
+    padding: 1%;
+}
+
+/* Columns inside formRow will have a spacing and default size*/
+.formRow > .column {
+    width: 50dvw;
+    padding: 1dvw;
+    margin: 0; 
+}
+
+/* All trello columns have deafult width and height but expand to fit all cards inside htem*/
+.trelloColumn {
+    width: 33%;
+    background-color: grey;
+    min-height: 80%;
+    height: max-content;
+    margin: 1%;
+}
+
+.trelloCard {
+    background-color: darkgoldenrod;
+    width: 90%;
+    height: 10dvh;
+    text-align: center;
+    margin: 0;
+}
+
+/* style just the card in preview section */
+#cardPreview {
+    background-color: wheat;
+    
+}
