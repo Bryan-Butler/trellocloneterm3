@@ -68,3 +68,17 @@ body {
 .trelloColumn > .trelloCard {
     margin: 5%;
 }
+
+/* Style the "Delete" button */
+.delete-button {
+    background-color: #f44336; 
+    color: black; 
+    border: 0px;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 10px 2px;
+    cursor: pointer;
+}

@@ -70,6 +70,15 @@ function renderColumns(){
             //Same as above for paragraph
             newCard.querySelector(".cardDisplay-content").innerText = card.content;
             
+            // create the "Delete" button
+            let deleteButton = document.createElement("button");
+            deleteButton.innerText = "Delete";
+            deleteButton.classList.add("delete-button");
+            deleteButton.addEventListener("click", function () {
+                deleteCard(card.timestamp);
+            });
+            newCard.appendChild(deleteButton);
+
             //allow cards to be draggable
             newCard.addEventListener("dragstart", drag)
             
@@ -92,6 +101,16 @@ document.getElementById("cardPreview").addEventListener("dragstart", drag)
 function allowDrop(event){
     event.preventDefault();
 }
+
+
+//delete button functionality
+function deleteCard(timestamp) {
+    trelloData.columns.forEach(column => {
+        column.cards = column.cards.filter(card => card.timestamp != timestamp);
+    });
+    renderColumns();
+}
+
 
 function dropCard(event){
     event.preventDefault();
