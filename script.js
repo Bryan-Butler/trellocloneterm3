@@ -130,6 +130,9 @@ createCardForm.addEventListener("submit", (event) => {
     console.log(title)
 })
 
+document.getElementById("cardTitle").addEventListener("click", (event) => {
+    console.log(event)
+})
 let createColumnForm = document.getElementById("columnForm")
 
 createColumnForm.addEventListener("submit", (event) => {

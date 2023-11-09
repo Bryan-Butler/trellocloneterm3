@@ -6,7 +6,8 @@
 }
 /* background colour here for whole page */
 body {
-    background-color: paleturquoise;
+    color: white;
+    background: linear-gradient(180deg, rgba(14,0,255,1) 0%, rgba(0,0,255,1) 5%, rgba(0,160,255,1) 100%);
 }
 
 /* make the container use flex box to arrange elements inside of it */
@@ -26,7 +27,8 @@ body {
     width: 100dvw;
     margin: 0;
     display: flex;
-    height: 10dvh;
+    height: 20dvh;
+    background-color: rgba(0, 0, 0, 0.326);
 }
 
 .displayRow {
@@ -34,6 +36,7 @@ body {
     display: flex;
     height: 70dvh;
     padding: 1%;
+
 }
 
 /* Columns inside formRow will have a spacing and default size*/
@@ -46,23 +49,27 @@ body {
 /* All trello columns have deafult width and height but expand to fit all cards inside htem*/
 .trelloColumn {
     width: 33%;
-    background-color: grey;
+    background-color: rgb(35, 35, 35);
     min-height: 80%;
     height: max-content;
     margin: 1%;
+    padding: 1%;
+    border-radius: 15px;
 }
 
 .trelloCard {
-    background-color: darkgoldenrod;
+    background-color: rgb(80, 80, 80);
     width: 90%;
     height: 10dvh;
     text-align: center;
     margin: 0;
+    border-radius: 15px
 }
 
 /* style just the card in preview section */
 #cardPreview {
-    background-color: wheat;  
+    background-color: rgb(58, 58, 58);  
+
 }
 
 .trelloColumn > .trelloCard {
