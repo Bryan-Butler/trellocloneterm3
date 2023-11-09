@@ -146,7 +146,13 @@ let createCardForm = document.getElementById("cardForm")
 createCardForm.addEventListener("submit", (event) => {
     event.preventDefault();
     let title = document.getElementById("cardTitle").value
+    let content = document.getElementById("cardContent").value
+    let newCardTitle = document.querySelector(".cardDisplay-title")
+    let newCardContent = document.querySelector(".cardDisplay-content")
+    newCardTitle.innerHTML = title
+    newCardContent.innerHTML = content
     console.log(title)
+
 })
 
 document.getElementById("cardTitle").addEventListener("click", (event) => {
