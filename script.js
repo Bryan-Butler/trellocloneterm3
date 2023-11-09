@@ -122,4 +122,25 @@ function dropCard(event){
     renderColumns();
 }
 
+let createCardForm = document.getElementById("cardForm")
+
+createCardForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    let title = document.getElementById("cardTitle").value
+    console.log(title)
+})
+
+let createColumnForm = document.getElementById("columnForm")
+
+createColumnForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    let name = document.getElementById("columnTitle").value
+    let newColumn = {
+        name: name,
+        cards: []
+    };
+    trelloData.columns.push(newColumn);
+    renderColumns();
+})
+
 renderColumns();
